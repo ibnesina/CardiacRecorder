@@ -17,7 +17,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         frameLayout = findViewById(R.id.registerFrameLayout);
-//        setFragment(new SignInFragment());
+       setFragment(new SignInFragment());
     }
 
     private void setFragment(Fragment fragment) {

@@ -39,6 +39,7 @@ public class SignUpFragment extends Fragment {
     private FrameLayout parentFrameLayout;
     private EditText email, fullName, password, conformPassword;
     private Button btnSignUp;
+
     private ImageButton btnClose;
 
     private FirebaseAuth firebaseAuth;
@@ -60,6 +61,7 @@ public class SignUpFragment extends Fragment {
         password = view.findViewById(R.id.password);
         conformPassword = view.findViewById(R.id.conformPassword);
 
+
         btnSignUp = view.findViewById(R.id.signUp);
 
         parentFrameLayout = getActivity().findViewById(R.id.registerFrameLayout);
@@ -76,7 +78,7 @@ public class SignUpFragment extends Fragment {
         alreadyHaveAnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                setFragment(new SignInFragment());
+                setFragment(new SignInFragment());
             }
         });
 
@@ -155,6 +157,8 @@ public class SignUpFragment extends Fragment {
                 checkEmailAndPassword();
             }
         });
+
+
 
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
