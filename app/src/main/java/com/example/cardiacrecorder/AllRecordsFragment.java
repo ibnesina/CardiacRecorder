@@ -39,14 +39,17 @@ public class AllRecordsFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         createRecordFabBtn = view.findViewById(R.id.createNoteFabBtn);
 
-        Query query = FirebaseFirestore.getInstance().collection("Records")
-                .document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("MyRecords")
-                .orderBy("timestamp", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<RecordModel> options = new FirestoreRecyclerOptions.Builder<RecordModel>()
-                .setQuery(query, RecordModel.class).build();
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recordAdapter = new RecordAdapter(options, getContext());
-        recyclerView.setAdapter(recordAdapter);
+        if(FirebaseAuth.getInstance().getUid()!=null) {
+            Query query = FirebaseFirestore.getInstance().collection("Records")
+                    .document(FirebaseAuth.getInstance().getCurrentUser().getUid()).collection("MyRecords")
+                    .orderBy("timestamp", Query.Direction.DESCENDING);
+            FirestoreRecyclerOptions<RecordModel> options = new FirestoreRecyclerOptions.Builder<RecordModel>()
+                    .setQuery(query, RecordModel.class).build();
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recordAdapter = new RecordAdapter(options, getContext());
+            recyclerView.setAdapter(recordAdapter);
+        }
+
 
         createRecordFabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,19 +64,26 @@ public class AllRecordsFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        recordAdapter.startListening();
+        if(FirebaseAuth.getInstance().getUid()!=null) {
+            recordAdapter.startListening();
+        }
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        recordAdapter.stopListening();
+        if(FirebaseAuth.getInstance().getUid()!=null) {
+            recordAdapter.stopListening();
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        recordAdapter.notifyDataSetChanged();
+        if(FirebaseAuth.getInstance().getUid()!=null) {
+            recordAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
