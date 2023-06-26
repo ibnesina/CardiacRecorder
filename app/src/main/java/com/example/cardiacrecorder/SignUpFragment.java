@@ -163,9 +163,9 @@ public class SignUpFragment extends Fragment {
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), MainActivity.class);
-//                startActivity(intent);
-//                getActivity().finish();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
     }
@@ -219,9 +219,9 @@ public class SignUpFragment extends Fragment {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-//                                                        Intent mainIntent = new Intent(getActivity(), MainActivity.class);
-//                                                        startActivity(mainIntent);
-//                                                        getActivity().finish();
+                                                        Intent mainIntent = new Intent(getActivity(), MainActivity.class);
+                                                        startActivity(mainIntent);
+                                                        getActivity().finish();
                                                     }
                                                     else {
                                                         btnSignUp.setEnabled(true);

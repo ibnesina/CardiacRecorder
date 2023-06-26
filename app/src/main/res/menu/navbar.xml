@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/allRecords"
+            android:icon="@drawable/all_notes"
+            android:title="All Records"/>
+
+<!--        <item android:id="@+id/sharing"-->
+<!--            android:icon="@drawable/share"-->
+<!--            android:title="Share"/>-->
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/signOut"
+            android:icon="@drawable/signout"
+            android:title="Sign Out"/>
+    </group>
+
+
+
+
+</menu>
