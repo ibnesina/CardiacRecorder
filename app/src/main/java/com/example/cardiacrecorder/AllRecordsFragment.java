@@ -54,7 +54,7 @@ public class AllRecordsFragment extends Fragment {
         createRecordFabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(getContext(), CreateNote.class));
+                startActivity(new Intent(getContext(), CreateNote.class));
             }
         });
 

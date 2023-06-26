@@ -55,8 +55,8 @@ public class ForgetPasswordFragment extends Fragment {
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(getActivity(), MainActivity.class);
-               // startActivity(intent);
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
                 getActivity().finish();
             }
         });

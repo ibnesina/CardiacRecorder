@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -25,7 +26,7 @@ public class RecordAdapter extends FirestoreRecyclerAdapter<RecordModel, RecordA
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull RecordViewHolder holder, int position, @NonNull RecordModel recordModel) {
+    protected void onBindViewHolder(@NonNull RecordViewHolder holder,  int position, @NonNull RecordModel recordModel) {
         holder.heartRate.setText(recordModel.getHeartRate());
         holder.systolic.setText(recordModel.getSystolic());
         holder.diastolic.setText(recordModel.getDiastolic());
@@ -40,15 +41,15 @@ public class RecordAdapter extends FirestoreRecyclerAdapter<RecordModel, RecordA
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(context, RecordDetailsActivity.class);
-//                intent.putExtra("heartRate", recordModel.getHeartRate());
-//                intent.putExtra("systolic", recordModel.getSystolic());
-//                intent.putExtra("diastolic", recordModel.getDiastolic());
-//                intent.putExtra("comment", recordModel.getComment());
-//                String docId = getSnapshots().getSnapshot(position).getId();
-//                intent.putExtra("docId", docId);
-//                intent.putExtra("date", new SimpleDateFormat("MMM d, yyyy").format(recordModel.getTimestamp().toDate()));
-//                context.startActivity(intent);
+               Intent intent = new Intent(context, RecordDetailsActivity.class);
+               intent.putExtra("heartRate", recordModel.getHeartRate());
+               intent.putExtra("systolic", recordModel.getSystolic());
+                intent.putExtra("diastolic", recordModel.getDiastolic());
+                intent.putExtra("comment", recordModel.getComment());
+               String docId = getSnapshots().getSnapshot(position).getId();
+               intent.putExtra("docId", docId);
+                intent.putExtra("date", new SimpleDateFormat("MMM d, yyyy").format(recordModel.getTimestamp().toDate()));
+                context.startActivity(intent);
             }
         });
     }
