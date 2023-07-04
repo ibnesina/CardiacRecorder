@@ -10,7 +10,6 @@ public class RecordModel {
     }
 
     public RecordModel(String heartRate, String diastolic, String systolic, String comment, Timestamp timestamp) {
-
         this.heartRate = heartRate;
         this.diastolic = diastolic;
         this.systolic = systolic;
