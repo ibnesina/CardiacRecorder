@@ -54,7 +54,12 @@ public class AllRecordsFragment extends Fragment {
         createRecordFabBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), CreateNote.class));
+                if(FirebaseAuth.getInstance().getUid()==null) {
+                    startActivity(new Intent(getContext(), RegisterActivity.class));
+                }
+                else {
+                    startActivity(new Intent(getContext(), CreateNote.class));
+                }
             }
         });
 

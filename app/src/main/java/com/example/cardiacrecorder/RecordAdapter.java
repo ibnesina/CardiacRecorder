@@ -33,8 +33,8 @@ public class RecordAdapter extends FirestoreRecyclerAdapter<RecordModel, RecordA
         holder.comment.setText(recordModel.getComment());
         holder.timeStamp.setText(new SimpleDateFormat("MMM d, yyyy").format(recordModel.getTimestamp().toDate()));
 
-        if(Integer.parseInt(recordModel.getDiastolic())<60 || Integer.parseInt(recordModel.getDiastolic())>80
-                || Integer.parseInt(recordModel.getSystolic())<90 || Integer.parseInt(recordModel.getSystolic())>120) {
+        if(Integer.parseInt(recordModel.getDiastolic())<60 || Integer.parseInt(recordModel.getDiastolic())>90
+                || Integer.parseInt(recordModel.getSystolic())<90 || Integer.parseInt(recordModel.getSystolic())>140) {
             holder.statusIcon.setColorFilter(Color.rgb(255, 0, 0));
         }
 

@@ -57,7 +57,7 @@ public class RecordDetailsActivity extends AppCompatActivity {
         diastolic.setText(dias);
         comment.setText(comm);
 
-        if(Integer.parseInt(dias)<60 || Integer.parseInt(dias)>80 || Integer.parseInt(sys)<90 || Integer.parseInt(sys)>120) {
+        if(Integer.parseInt(dias)<60 || Integer.parseInt(dias)>90 || Integer.parseInt(sys)<90 || Integer.parseInt(sys)>140) {
             statusIcon.setColorFilter(Color.rgb(255, 0, 0));
         }
 
