@@ -48,6 +48,13 @@ public class ForgetPasswordFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Used to change the password if the user forgot it
+     *
+     * @param view The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed
+     *      from a previous saved state as given here.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -95,6 +102,11 @@ public class ForgetPasswordFragment extends Fragment {
         });
     }
 
+    /**
+     * Replaces the current fragment in the parent frame layout with the specified fragment.
+     *
+     * @param fragment The fragment to be displayed.
+     */
     private void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(parentFrameLayout.getId(), fragment);

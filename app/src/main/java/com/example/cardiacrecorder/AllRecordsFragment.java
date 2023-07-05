@@ -32,6 +32,21 @@ public class AllRecordsFragment extends Fragment {
     List<RecordModel> recordModelList;
     RecordAdapter recordAdapter;
 
+    /**
+     * sets up the RecyclerView to display the user's records in descending order based on the timestamp.
+     * If the user is not authenticated (not logged in), the "createRecordFabBtn" button will direct
+     *      the user to the RegisterActivity to sign in or register.
+     * Otherwise, it will direct the user to the CreateNote activity to create a new record.
+     *
+     * @param inflater The LayoutInflater object that can be used to inflate any views in the fragment,
+     * @param container If non-null, this is the parent view that the fragment's
+     *      UI should be attached to.  The fragment should not add the view itself,
+     *      but this can be used to generate the LayoutParams of the view.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed
+     *      from a previous saved state as given here.
+     *
+     * @return
+     */
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_all_records,container,false);
@@ -66,6 +81,10 @@ public class AllRecordsFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Called when the fragment is visible to the user and actively running.
+     * Starts listening for data changes in the recordAdapter to update the RecyclerView.
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -75,6 +94,10 @@ public class AllRecordsFragment extends Fragment {
 
     }
 
+    /**
+     * Called when the fragment is no longer visible to the user and not actively running.
+     * Stops listening for data changes in the recordAdapter to release resources.
+     */
     @Override
     public void onStop() {
         super.onStop();
@@ -83,6 +106,10 @@ public class AllRecordsFragment extends Fragment {
         }
     }
 
+    /**
+     * Called when the fragment is visible to the user and actively running.
+     * Notifies the recordAdapter of any data set changes to update the UI.
+     */
     @Override
     public void onResume() {
         super.onResume();

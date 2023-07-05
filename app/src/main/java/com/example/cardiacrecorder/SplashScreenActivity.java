@@ -21,6 +21,15 @@ public class SplashScreenActivity extends AppCompatActivity {
     TextView sp_text,sp_text2;
     Animation Splash_top,Splash_bottom ,Splash_RL;
 
+    /**
+     * Called when the activity is starting.
+     *      Performs initialization tasks and sets up the splash screen UI.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +64,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         });
         thread.start();
     }
+
+    /**
+     * Performs the background work for the splash screen.
+     * Updates the progress bar in increments of 20% at a fixed interval.
+     */
     public void doWork(){
         for (progress = 0; progress <= 100; progress = progress + 20) {
             try {
@@ -66,6 +80,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * Checks if a user is already authenticated.
+     *      If not, it starts the registration activity.
+     *      If the user is authenticated, it starts the main activity.
+     */
     public void statApp()
     {
         if(FirebaseAuth.getInstance().getCurrentUser()==null) {
@@ -77,6 +97,5 @@ public class SplashScreenActivity extends AppCompatActivity {
             startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
             finish();
         }
-
     }
 }
