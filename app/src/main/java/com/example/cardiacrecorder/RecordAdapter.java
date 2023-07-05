@@ -25,6 +25,13 @@ public class RecordAdapter extends FirestoreRecyclerAdapter<RecordModel, RecordA
         this.context = context;
     }
 
+    /**
+     * Binds the data from the RecordModel to the views in the RecordViewHolder.
+     *
+     * @param holder The ViewHolder that should be updated with the data.
+     * @param position The position of the item within the adapter's data set.
+     * @param recordModel The RecordModel containing the data to be displayed.
+     */
     @Override
     protected void onBindViewHolder(@NonNull RecordViewHolder holder,  int position, @NonNull RecordModel recordModel) {
         holder.heartRate.setText(recordModel.getHeartRate());

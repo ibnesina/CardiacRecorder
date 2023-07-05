@@ -47,6 +47,19 @@ public class SignUpFragment extends Fragment {
 
     private final String emailPattern =  "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
+    /**
+     * Inflates the layout for this fragment and initializes the necessary views and variables.
+     *
+     * @param inflater The LayoutInflater object that can be used to inflate
+     *      any views in the fragment,
+     * @param container If non-null, this is the parent view that the fragment's
+     * UI should be attached to.  The fragment should not add the view itself,
+     *      but this can be used to generate the LayoutParams of the view.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed
+     *      from a previous saved state as given here.
+     *
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,9 +85,19 @@ public class SignUpFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Called when the view hierarchy is created for the fragment.
+     * It initializes the click listeners, text change listeners, and other necessary operations.
+     *
+     * @param view The View returned by {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed
+     * from a previous saved state as given here.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        // Set click listener for "Already have an account" text view
         alreadyHaveAnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +105,7 @@ public class SignUpFragment extends Fragment {
             }
         });
 
+        // Set text change listeners for input fields
         email.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -170,12 +194,21 @@ public class SignUpFragment extends Fragment {
         });
     }
 
+    /**
+     * Replaces the current fragment in the parent FrameLayout with the specified fragment.
+     * @param fragment The Fragment object to replace the current fragment.
+     */
     private void setFragment(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(parentFrameLayout.getId(), fragment);
         fragmentTransaction.commit();
     }
 
+    /**
+     * Checks the input fields and enables or disables the sign-up button based on the input validity.
+     * The sign-up button will be enabled if all the input fields have non-empty values and meet the required criteria.
+     * Otherwise, the sign-up button will be disabled.
+     */
     public void checkInputs() {
         if(!TextUtils.isEmpty(email.getText())) {
             if(!TextUtils.isEmpty(fullName.getText())) {
@@ -200,6 +233,13 @@ public class SignUpFragment extends Fragment {
         }
     }
 
+    /**
+     * Checks the email and password inputs and performs the sign-up process if they are valid.
+     * If the email is valid and the password matches the confirm password, the user will be created
+     * using FirebaseAuth.createUserWithEmailAndPassword and the user data will be saved in Firestore.
+     * Upon successful sign-up, the user will be redirected to the main activity.
+     * If there is an error during the sign-up process, an error message will be displayed.
+     */
     private void checkEmailAndPassword() {
         if(email.getText().toString().matches(emailPattern)) {
             if(password.getText().toString().equals(conformPassword.getText().toString())) {
@@ -230,7 +270,6 @@ public class SignUpFragment extends Fragment {
                                                     }
                                                 }
                                             });
-//
                                 }
                                 else {
                                     btnSignUp.setEnabled(true);

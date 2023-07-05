@@ -9,6 +9,15 @@ public class RecordModel {
     public RecordModel() {
     }
 
+    /**
+     * Constructs a new RecordModel object with the provided data.
+     *
+     * @param heartRate  The heart rate value of the record.
+     * @param diastolic  The diastolic blood pressure value of the record.
+     * @param systolic   The systolic blood pressure value of the record.
+     * @param comment    The comment associated with the record.
+     * @param timestamp  The timestamp indicating the time of the record.
+     */
     public RecordModel(String heartRate, String diastolic, String systolic, String comment, Timestamp timestamp) {
         this.heartRate = heartRate;
         this.diastolic = diastolic;
