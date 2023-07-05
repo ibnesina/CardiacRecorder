@@ -19,6 +19,10 @@ import java.util.Calendar;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class RecordAddDeleteUnitTest {
+
+    /**
+     * Testing addRecord method
+     */
     @Test
     public void testAddRecord() {
         RecordList recordList = new RecordList();
@@ -32,6 +36,9 @@ public class RecordAddDeleteUnitTest {
         assertEquals(2, recordList.arrayList.size());
     }
 
+    /**
+     * testing addRecord method for exceptions
+     */
     @Test
     public void testAddRecordException() {
         RecordList recordList = new RecordList();
@@ -41,6 +48,9 @@ public class RecordAddDeleteUnitTest {
         assertThrows(IllegalArgumentException.class, ()-> recordList.addRecord(recordModel1));
     }
 
+    /**
+     * testing deleteRecord method
+     */
     @Test
     public void testDeleteRecord() {
         RecordList recordList = new RecordList();
@@ -69,6 +79,9 @@ public class RecordAddDeleteUnitTest {
         assertTrue(!recordList.arrayList.contains(recordModel1));
     }
 
+    /**
+     * testing deleteRecord method for exceptions
+     */
     @Test
     public void testDeleteRecordException() {
         RecordList recordList = new RecordList();
@@ -81,6 +94,9 @@ public class RecordAddDeleteUnitTest {
         assertThrows(IllegalArgumentException.class, ()-> recordList.deleteRecord(1));
     }
 
+    /**
+     * testing count method
+     */
     @Test
     public void testCountRecord() {
         RecordList recordList = new RecordList();

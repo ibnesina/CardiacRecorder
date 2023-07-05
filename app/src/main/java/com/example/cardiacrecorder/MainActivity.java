@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
     TextView fullName, emailAddress;
 
+    /**
+     * Retrieves the user's information from Firestore and displays it in the navigation drawer header.
+     * If the user is not signed in, redirects to the RegisterActivity to sign in.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Called when the back button is pressed. Closes the navigation drawer if it is open.
+     * Otherwise, invokes the default behavior of the superclass.
+     */
     @Override
     public void onBackPressed() {
         if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
