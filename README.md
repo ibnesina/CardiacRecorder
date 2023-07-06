@@ -21,9 +21,9 @@ Sample UI of the APP:<br>
     <td> <img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_8.jpeg" height = "400px" width="270px" /> </td>
   </tr>
   <tr> 
+    <td> <img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_9.jpeg" height = "400px" width="270px" /> </td>
     <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_2.jpg" height = "400px" width="270px"/></td>
     <td> <img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_3.jpg" height = "400px" width="270px" /> </td>
-    <td> <img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_9.jpg" height = "400px" width="270px" /> </td>
   </tr>
   <tr> 
     <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/app_ui_6.jpg" height = "400px" width="270px"/></td>
