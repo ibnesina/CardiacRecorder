@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        drawerLayout = findViewById(R.id.drawerLayout);
+        drawerLayout = findViewById(R.id.mainActivity);
         navigationView = findViewById(R.id.nav_view);
 
         View headerView = navigationView.getHeaderView(0);
