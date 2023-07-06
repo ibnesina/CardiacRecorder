@@ -15,23 +15,19 @@ CardiacRecorder is a simple, useful and user-friendly android application to mon
 
 Sample UI of the APP:<br>
 
-<table>
-  <tr> 
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.09.26%20AM.png" height = "400px" width="200px"/></td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.33%20AM.png" height = "400px" width="200px" /> </td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.16.35%20AM.png" height = "400px" width="200px" /></td>
-  </tr>
-  <tr>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.59%20AM.png" height = "400px" width="200px"/></td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.12.55%20AM.png" height = "400px" width="200px"/></td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.13.42%20AM.png" height = "400px" width="200px"/></td>
-  </tr>
-  <tr>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.14.18%20AM.png" height = "400px" width="200px"/></td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.14.43%20AM.png" height = "400px" width="200px"/></td>
-    <td><img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.03%20AM.png" height = "400px" width="200px"/></td>
-  </tr>
-</table>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.09.26%20AM.png" height = "400px" width="200px"/>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.33%20AM.png" height = "400px" width="200px" />
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.16.35%20AM.png" height = "400px" width="200px" />
+<br>
+<br>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.59%20AM.png" height = "400px" width="200px"/>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.12.55%20AM.png" height = "400px" width="200px"/>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.13.42%20AM.png" height = "400px" width="200px"/>
+<br>
+<br>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.14.18%20AM.png" height = "400px" width="200px"/>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.14.43%20AM.png" height = "400px" width="200px"/>
+<img src = "https://github.com/ibnesina/CardiacRecorder/blob/master/CardiacRecorder%20UI/Screenshot%202023-07-06%20at%209.15.03%20AM.png" height = "400px" width="200px"/>
 <hr>
 
 More details about this android application project can be found <a href="https://github.com/ibnesina/CardiacRecorder/wiki">here</a>
